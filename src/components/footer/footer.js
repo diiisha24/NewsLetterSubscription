@@ -15,9 +15,9 @@ const Footer = () => {
   }
   return (
     <div className='footer'> 
+    <div className='copyright_wrapper project_name'>React-Rectify Newsletter</div>
     <SocialIcons/>
     <div className='copyright_wrapper'>
-      <div>React Rectify Newsletter</div>
       <div>© Copyright DishaG.</div>
       <a href="mailto:gargdisha1420@gmail.com" className='mail_wrapper'>
         gargdisha1420@gmail.com
