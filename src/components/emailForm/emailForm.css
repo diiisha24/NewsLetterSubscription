@@ -1,0 +1,31 @@
+.form_wrapper {
+    display: flex;
+    gap:-1;
+}
+.form_input{
+    font-size: 14px;
+    height:40px;
+    width:340px;
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius:4px 0px 0px 4px;
+    outline: none;
+}
+.form_button{
+    font-size: 15px;
+    color: #00000090;
+    font-weight: 500;
+    width:110px;
+    border: none;
+    background-color: #b5b5b5d1;
+    /* background-color: #0e524e; */
+    border-radius: 0px 4px 4px 0px;
+}
+.form_button:hover:enabled{
+    cursor: pointer;
+    background-color: #b5b5b5;
+}
+.form_button:disabled{
+    background-color: #b60c0c50;
+    cursor: not-allowed;
+}

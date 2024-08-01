@@ -35,6 +35,6 @@
 .mail_wrapper{
     text-decoration: none;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 12px !important;
     color: white !important;
 }
