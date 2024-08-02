@@ -1,7 +1,6 @@
 import React from 'react'
-import "./footer.css"
+import './footer.css'
 import SocialIcons from '../socialIcons/socialIcons'
-
 const footer = () => {
   return (
     <div className='footer'>

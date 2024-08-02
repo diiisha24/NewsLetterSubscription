@@ -1,5 +1,5 @@
 import React from 'react'
-import SocialIcons from '../socialIcons/socialIcons'
+// import SocialIcons from '../socialIcons/socialIcons'
 import './header.css'
 
 const header = () => {
@@ -10,8 +10,8 @@ const header = () => {
           dee.<span>NEWS</span>
         </div>
         <div className='header_nav'>
-          <SocialIcons/>
-          {/* <a href="/">gargdisha1420@gmail.com</a> */}
+          {/* <SocialIcons/> */}
+          <a href="/">gargdisha1420@gmail.com</a>
         </div>
       </div>
     </div>
