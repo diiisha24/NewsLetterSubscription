@@ -3,7 +3,7 @@ import EmailForm from '../emailForm/emailForm'
 import './heroSection.css'
 import Loading from '../../common/loading';
 import axios from 'axios'
-import { apiURL } from '../../backend';
+import { apiURL, notify } from '../../backend';
 
 export default class heroSection extends Component {
   constructor(props){
@@ -23,8 +23,16 @@ export default class heroSection extends Component {
     axios.post(`${apiURL}/subscribe`,{
       email:query
     }).then(res=>{
-
+      if(res.data.success){
+        notify('success', 'Subscribed to Newsletter!!', res.data.message);
+        this.setState({email:""});
+        this.handleLoadingState(false); 
+      }else{
+        notify('error', 'Unable to subscribe to Newsletter!!', res.data.error);
+        this.handleLoadingState(false);
+      }
     }).catch(err =>{
+      notify('error','Error. Please try again Later.', err.message);
       this.handleLoadingState(false);
     })
   }

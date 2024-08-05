@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import "./emailForm.css"
 import validator from 'validator'
 
@@ -12,6 +13,12 @@ const emailForm = ({email,handleOnChangeEmail,handleSendEmail}) => {
       </div>
     </form>
   )
+}
+
+emailForm.propTypes = {
+  email : PropTypes.string,
+  handleOnChangeEmail : PropTypes.func,
+  handleSendEmail : PropTypes.func
 }
 
 export default emailForm
