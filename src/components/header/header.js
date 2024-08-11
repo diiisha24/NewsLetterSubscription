@@ -1,5 +1,5 @@
 import React from 'react'
-// import SocialIcons from '../socialIcons/socialIcons'
+import SocialIcons from '../socialIcons/socialIcons'
 import './header.css'
 
 const header = () => {
