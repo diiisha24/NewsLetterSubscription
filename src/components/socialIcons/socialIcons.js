@@ -8,23 +8,23 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const socialIcons = () => {
   const user ={
-    instagram: "",
-    linkedin:"",
-    github:""
+    instagram: "https://www.instagram.com/deee_wrldfwb/",
+    linkedin:"https://www.linkedin.com/in/diiisha24/",
+    github:"https://github.com/diiisha24"
   }
   return (
     <div className='icons_wrapper'>
-      <a href='mailto:gargdisha1420@gmail.com'>
+      <a href="mailto:gargdisha1420@gmail.com">
         <FontAwesomeIcon size='lg' icon={faEnvelope} />
       </a>
-      <a href='mailto:gargdisha1420@gmail.com'>
+      <a href={user.instagram} target='_blank'  rel='noopener noreferrer'>
         <FontAwesomeIcon size='lg' icon={faInstagram} />
       </a>
-      <a href='mailto:gargdisha1420@gmail.com'>
+      <a href={user.linkedin} target='_blank'>
         <FontAwesomeIcon size='lg' icon={faLinkedin} />
       </a>
-      <a href='mailto:gargdisha1420@gmail.com'>
-        <FontAwesomeIcon size='lg' icon={faGithub} />
+      <a href={user.github} target='_blank'>
+      <FontAwesomeIcon size='lg' icon={faGithub} />
       </a>
     </div>
   )

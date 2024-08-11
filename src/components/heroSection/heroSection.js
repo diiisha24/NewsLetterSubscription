@@ -10,7 +10,8 @@ export default class heroSection extends Component {
     super(props);
     this.state = {
       email : "",
-      loading : false
+      loading : false,
+      showSuccessMessage : false
     }
   }
   handleLoadingState = query =>{
@@ -19,14 +20,19 @@ export default class heroSection extends Component {
 
   handleSendEmail = query => {
     // console.log(query);
+
     this.handleLoadingState(true);
     axios.post(`${apiURL}/subscribe`,{
       email:query
     }).then(res=>{
       if(res.data.success){
-        notify('success', 'Subscribed to Newsletter!!', res.data.message);
-        this.setState({email:""});
+        notify('success', 'Subscribed to Newsletter!!', res.data.success);
+        this.setState({email:"", showSuccessMessage:true});
         this.handleLoadingState(false); 
+
+        setTimeout(() =>{
+          this.setState({showSuccessMessage:false})
+        }, 5000);
       }else{
         notify('error', 'Unable to subscribe to Newsletter!!', res.data.error);
         this.handleLoadingState(false);
@@ -68,7 +74,9 @@ export default class heroSection extends Component {
             }
           </div>
         </div>
-        <div className="sec1_main success_message">You have Successfully Subscribed to our Newsletter</div>
+        {this.state.showSuccessMessage && (
+          <div className="sec1_main success_message">You have Successfully Subscribed to our Newsletter</div>
+        ) }
       </div>
     )
   }
