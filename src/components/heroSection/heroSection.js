@@ -73,8 +73,6 @@ export default class heroSection extends Component {
     )
   }
 }
-import EmailForm from '../emailForm/emailForm'
-import './heroSection.css'
 
 // const heroSection = () => {
 //     const sec1background = './images/blog_opacity_reduce.png'
